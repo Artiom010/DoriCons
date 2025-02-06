@@ -11,6 +11,16 @@ export default {
     ],
     theme: {
         extend: {
+
+            colors: {
+                'custom-green': '#00EF18',
+                'custom-green2': '#00EF19',
+            },
+
+            boxShadow: {
+        'custom-shadow': '0px 26px 41px -7px #00EA414D',
+      },
+            
              backgroundImage: {
         'hero-pattern': "url('/img/logo.png')",
         'footer-texture': "url('/img/footer-texture.png')",
@@ -18,6 +28,7 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
                 montserrat: ['Montserrat', 'sans-serif'],
+                 bebas: ['Bebas Neue', 'sans-serif'],
             },
         },
     },
