@@ -464,18 +464,22 @@
 
      .black_section p {
          margin-right: 24%;
-         font-size: 1.4vw;
-         margin-top: 7px;
-         max-width: 100%;
-         display: flex;
-         justify-content: unset;
+        font-size: 1.4vw;
+        margin-top: 7px;
+        max-width: 100%;
+        display: flex;
+        justify-content: unset;
+        flex-direction: column;
      }
 
 
 
      .black_section span {
-         margin-left: -20%;
-         margin-right: 2%;
+         display: flex;
+        margin-left: -20%;
+        margin-right: 2%;
+        flex-direction: row;
+        justify-content: center;
      }
 
  }
@@ -611,58 +615,77 @@
 
 
     <style>
-         .slideshow-container {
-            position: relative;
-            width: 40%;
-            max-width: 100%;
-            margin: -13% auto;
-            overflow: hidden;
-        }
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .slide {
-            min-width: 100%;
-            transition: opacity 1s ease-in-out;
-        }
-        .slide img {
-            width: 100%;
-            display: block;
-        }
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #00ff00;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 20px;
-            border-radius: 50%;
-        }
-        .prev { left: 10px; }
-        .next { right: 10px; }
-        .dots {
-            margin-left: 14%;
-            text-align: center;
-            padding: 10px;
-        }
-        .dot {
-            height: 10px;
-            width: 10px;
-            margin: 5px;
-            background-color: gray;
-            display: inline-block;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        .active {
-            background-color: green;
-        }
-        @media (max-width: 768px) {
-            .prev, .next { display: none; }
-        }
+.slideshow-container {
+    position: relative;
+    width: 82%;
+    max-width: 100%;
+    margin: -13% auto;
+    overflow: hidden;
+    aspect-ratio: 1.78; /* Adjust based on the aspect ratio of your image */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 1s ease-in-out;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height:42%;
+    object-fit: cover; /* Ensures the images fill the container while maintaining aspect ratio */
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #00ff00;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.dots {
+    position: absolute;
+    margin-top: 13%;
+    margin-left: 54%;
+    transform: translateX(-50%); /* Centers the dots */
+    text-align: center;
+    padding: 10px;
+    z-index: 1;
+}
+
+.dot {
+    height: 12px; /* Increased dot size */
+    width: 12px; /* Increased dot size */
+    margin: 5px;
+    background-color: #00ff00;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active {
+    background-color:rgba(61, 65, 61, 0.88);
+}
+
+@media (max-width: 768px) {
+    .prev, .next { display: none; }
+}
+
+
     </style>
 
     <div class="black_section" style="background-image:url(backneg.png); opacity:100%;">
@@ -683,9 +706,19 @@
 
     <div class="slideshow-container">
         <div class="slides">
-            <div class="slide"><img src="terminal.png" alt="Slide 1"></div>
-            <div class="slide"><img src="Russia.png" alt="Slide 2"></div>
-            <div class="slide"><img src="support.png" alt="Slide 3"></div>
+            <div class="slide"><img src="cons1.jpeg" alt="Slide 1"></div>
+            <div class="slide"><img src="cons2.jpeg" alt="Slide 2"></div>
+            <!-- <div class="slide"><img src="cons3.jpeg" alt="Slide 3"></div> -->
+            <div class="slide"><img src="cons4.jpeg" alt="Slide 4"></div>
+            <div class="slide"><img src="cons5.jpeg" alt="Slide 5"></div>
+            <div class="slide"><img src="cons6.jpeg" alt="Slide 6"></div>
+            <div class="slide"><img src="cons7.jpeg" alt="Slide 7"></div>
+            <div class="slide"><img src="cons8.jpeg" alt="Slide 8"></div>
+            <div class="slide"><img src="cons9.jpeg" alt="Slide 9"></div>
+            <div class="slide"><img src="cons10.jpeg" alt="Slide 10"></div>
+            <div class="slide"><img src="cons11.jpeg" alt="Slide 11"></div>
+            <!-- <div class="slide"><img src="cons12.jpeg" alt="Slide 12"></div> -->
+            <div class="slide"><img src="cons13.jpeg" alt="Slide 13"></div>
         </div>
         <button class="prev">&#8592;</button>
         <button class="next">&#8594;</button>
