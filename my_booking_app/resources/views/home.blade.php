@@ -13,16 +13,28 @@
 </head>
 
 
-<body style="background-image: url(bgk.jpg);">
+<body>
 
 
 
 
 
     <style>
+
+    body {
+    background-image: url('bgk.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Opțional, pentru un efect de parallax */
+}
+
          .image_master {
+     position: relative;
+     z-index: 5;
      margin-left: auto;
-     margin-top: -46px;
+     margin-top: -120px;
+     margin-bottom: 54px;
      width: 70%;
      max-width: 100%;
      display: flex;
@@ -48,6 +60,7 @@
  }
 
  .img_after_btn {
+     margin-bottom: -23px;
      margin-top: 1%;
      margin-left: 14%;
      width: 10%;
@@ -57,7 +70,7 @@
  }
 
  .img_terminal {
-     margin-top: -14%;
+     margin-top: -13.3%;
      margin-left: 37%;
      width: 10%;
      max-width: 100%;
@@ -67,7 +80,9 @@
 
 
  .img_logo {
-     margin-top: -14.3%;
+    z-index: 10;
+    position: relative;
+     margin-top: -12.8%;
      margin-left: 60%;
      width: 10%;
      max-width: 100%;
@@ -76,7 +91,9 @@
  }
 
  .img_support {
-     margin-top: -13%;
+     z-index: 10;
+     position: relative;
+     margin-top: -12.7%;
      margin-left: 84.5%;
      width: 10%;
      max-width: 100%;
@@ -95,18 +112,19 @@
  }
 
  .txtrus p {
-     line-height: normal;
-     margin-top: 10px;
-     margin-left: 12%;
-     width: 15%;
-     max-width: 100%;
-     display: flex;
-     justify-content: center;
+     margin-bottom: 30px;
+    line-height: normal;
+    margin-top: 9px;
+    margin-left: 13%;
+    width: 15%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
  }
 
  .txt_terminal h2 {
      margin-top: 2px;
-     margin-left: 36%;
+     margin-left: 35.5%;
      width: 15%;
      max-width: 100%;
      display: flex;
@@ -125,8 +143,10 @@
  }
 
  .txt_logo h2 {
+    z-index: 10;
+    position: relative;
      margin-top: -24px;
-     margin-left: 57.5%;
+     margin-left: 57.1%;
      width: 15%;
      max-width: 100%;
      display: flex;
@@ -135,6 +155,8 @@
  }
 
  .txt_logo p {
+    z-index: 10;
+    position: relative;
      line-height: normal;
      margin-top: 10px;
      margin-left: 60.5%;
@@ -145,8 +167,10 @@
  }
 
  .txt_support h2 {
+    z-index: 10;
+    position: relative;
      margin-top: -25px;
-     margin-left: 82%;
+     margin-left: 81.6%;
      width: 15%;
      max-width: 100%;
      display: flex;
@@ -155,6 +179,8 @@
  }
 
  .txt_support p {
+    z-index: 10;
+    position: relative;
      line-height: normal;
      margin-top: 10px;
      margin-left: 85%;
@@ -205,6 +231,8 @@
 
 
  .black_section {
+            position: relative;
+            z-index: 10;
             margin-top: 2%;
             width: 100%;
             /* height: 96%; */
@@ -240,7 +268,7 @@
             height: 100%;
             margin-top: -2%;
             margin-left: -9%;
-            margin-right: 11%;
+            margin-right: 0%;
         }
 
         .img_perie {
@@ -271,9 +299,10 @@
     }
 
             .black_section p {
-            margin-right: 24%;
+            margin-right: 13%;
             font-size: 1.4vw;
             margin-top: 7px;
+            margin-bottom: 100px;
             max-width: 100%;
             display: flex;
             justify-content: unset;
@@ -286,7 +315,133 @@
             margin-right: 2%;
         }
 
+
+
+        .slideshow-container {
+    position: relative;
+    z-index: 15;
+    width: 82%;
+    max-width: 100%;
+    margin: -13% auto;
+    overflow: hidden;
+    aspect-ratio: 1.78;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 1s ease-in-out;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height:42%;
+    object-fit: cover; /* Ensures the images fill the container while maintaining aspect ratio */
+    display: block;
+}
+
+.prev, .next {
+        position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #00ff00;
+    border: none;
+    padding: 13px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 38%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.dots {
+    position: absolute;
+    margin-top: 13%;
+    margin-left: 50%;
+    transform: translateX(-50%); /* Centers the dots */
+    text-align: center;
+    padding: 10px;
+    z-index: 1;
+}
+
+.dot {
+    height: 12px; /* Increased dot size */
+    width: 12px; /* Increased dot size */
+    margin: 5px;
+    background-color: #00ff00;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active {
+    background-color:rgba(61, 65, 61, 0.88);
+}
+
+#dori{
+    margin-right: 0%;
+    font-size: 1.4vw;
+    margin-top: 28px;
+    margin-bottom: 11px;
+    max-width: 100%;
+    display: flex;
+    color: #00EF18;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .prev, .next { display: none; }
+}
+
+
+
  @media screen and (max-width: 1400px) {
+
+
+
+    .img_key {
+        display: none;      
+        /* float: left;
+        width: 20%;
+        height: 100%;
+        margin-top: 17%;
+        margin-left: -6%;
+        margin-right: -12%; */
+        }
+
+        .img_valic {
+            float: left;
+            width: 20%;
+            height: 100%;
+            margin-top: 6%;
+            margin-left: 0%;
+            margin-right: 2%;
+        }
+
+        .img_perie {
+            float: right;
+            width: 19%;
+            height: 100%;
+            margin-top: 0%;
+            margin-left: -9%;
+            margin-right: 2%;
+        }
+
+        .img_ciocan {
+            display: none;
+            /* float: right;
+            width: 20%;
+            height: 100%;
+            margin-top: -15%;
+            margin-left: -16%;
+            margin-right: -27%; */
+        }
 
      .image_master {
          width: 100%;
@@ -297,6 +452,10 @@
 
 
      .master_describe_img {
+        z-index: 5;
+        position: relative;
+         margin-top: 80px;
+         margin-bottom: -52px;
          width: 100%;
          height: auto;
          object-fit: cover;
@@ -339,6 +498,8 @@
      }
 
      .content {
+        position: relative; 
+        z-index: 10;
          font-size: 34px;
          font-weight: 700;
          max-width: 100% !important;
@@ -363,7 +524,7 @@
          max-width: 100%;
          text-align: left;
          margin-top: 1%;
-         margin-left: 0%;
+         margin-left: 8%;
          color: #6b6b6b;
      }
 
@@ -452,20 +613,28 @@
          text-align: center;
      }
 
+     
 
+        .black_section {
+                padding: 5% 0%;
+         
+     } 
      .black_section h2 {
-         font-size: 1.9vw;
-         margin-top: -80px;
+        margin-right: 34%;
+         font-size: 3.4vw;
+         margin-top: 5px;
          max-width: 100%;
          display: flex;
          justify-content: center;
          font-weight: 700;
+         color: #00EF18;
      }
 
      .black_section p {
-         margin-right: 24%;
-        font-size: 1.4vw;
-        margin-top: 7px;
+        margin-bottom: 100px;
+         margin-right: 23%;
+        font-size: 2.4vw;
+        margin-top: 10px;
         max-width: 100%;
         display: flex;
         justify-content: unset;
@@ -481,6 +650,77 @@
         flex-direction: row;
         justify-content: center;
      }
+
+     #dori{
+    margin-right: 34% !important;
+    font-size: 2.4vw !important;
+    margin-top: 13px !important;
+    margin-bottom: 11px !important;
+    max-width: 100% !important;
+    display: flex !important;
+    color: #00EF18 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    }
+    .slideshow-container {
+        position: relative;
+        z-index: 15;
+        width: 82%;
+        max-width: 100%;
+        margin: -17% auto -12% auto !important;
+        overflow: hidden;
+        aspect-ratio: 1.78;
+    }
+
+
+    .dots {
+    /* position: absolute !important; */
+    margin-top: 13% !important;
+    margin-left: 50% !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+    padding: 0% !important;
+    z-index: 1 !important;
+    }
+
+
+        .fundation_comp h1 {
+        align-items: center;
+        margin-bottom: 9px !important;
+        font-size: 20px !important;
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+}
+
+    .founders-info {
+    display: none;
+
+}
+
+
+
+    .founders img {
+        display: none;
+
+}
+
+
+    .content_after {
+    max-width: 100% !important;
+}
+
+.cta-button {
+    margin: 5% 20% 1% 20% !important;
+    display: flex !important;
+} 
+
+    .cta-button a{
+        padding: 1% !important;
+        display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    }
+
 
  }
        
@@ -503,13 +743,13 @@
             <img src="logo.png" alt="LOGOTIP" class="w-24 h-24 mr-20">
 
             <!-- Meniu pentru desktop și tablete (largi) -->
-            <div class="font-montserrat hidden md:flex space-x-10 ml-6" style="align-items: center;">
+            <div class="font-montserrat hidden md:flex space-x-10 ml-6" style="align-items: center; position: relative; z-index: 10;">
                 <a href="/" style="background: none;" class="text-gray-800 font-medium text-sm hover:text-green-500">Despre Noi</a>
                 <a href="/about" style="background: none;" class="text-gray-800 font-medium text-sm hover:text-green-500">Servicii de Construcție</a>
                 <a href="/agents" style="background: none;" class="text-gray-800 font-medium text-sm hover:text-green-500">Proiectele Noastre</a>
                 <a href="/services" style="background: none;" class="text-gray-800 font-medium text-sm hover:text-green-500">Sustenabilitate și Inovație</a>
                 <!-- Adaugă stiluri pentru aliniere și spațiu -->
-                <a href="tel:+37379804176" class="shadow-custom-shadow ml-16 px-6 py-2 rounded-full bg-custom-green text-black text-sm font-semibold  inline-flex items-center space-x-2">
+                <a href="tel:+37379804176"  class="shadow-custom-shadow ml-16 px-6 py-2 rounded-full bg-custom-green text-black text-sm font-semibold  inline-flex items-center space-x-2">
                     <span>Sună Acum</span>
                     <i class="fa fa-phone"></i>
                 </a>
@@ -519,19 +759,19 @@
 
             <!-- Butonul hamburger pentru mobil -->
             <div class="md:hidden flex items-center ml-6">
-                <button id="hamburger-btn" class="text-gray-800 text-2xl focus:outline-none">
+                <button id="hamburger-btn" style="position: relative; z-index: 10;" class="text-gray-800 text-2xl focus:outline-none">
                     &#9776; <!-- Simbolul pentru meniul hamburger -->
                 </button>
             </div>
         </nav>
 
         <!-- Meniul de navigare pe mobil (ascuns inițial) -->
-        <div style="background:none;" id="mobile-menu" class="font-montserrat md:hidden hidden bg-white text-center py-4">
+        <div style="background:none; position: relative; z-index: 10;" id="mobile-menu" class="font-montserrat md:hidden hidden bg-white text-center py-4">
             <a href="/" class="block text-gray-800 font-medium text-sm py-2 hover:text-green-500">Despre Noi</a>
             <a href="/about" class="block text-gray-800 font-medium text-sm py-2 hover:text-green-500">Servicii de Construcție</a>
             <a href="/agents" class="block text-gray-800 font-medium text-sm py-2 hover:text-green-500">Proiectele Noastre</a>
             <a href="/services" class="block text-gray-800 font-medium text-sm py-2 hover:text-green-500">Sustenabilitate și Inovație</a>
-            <a href="tel:+37379804176" class="shadow-custom-shadow ml-15 px-6 py-2 rounded-full bg-custom-green text-black text-sm font-semibold inline-flex items-center space-x-2"><span>Sună Acum</span>
+            <a href="tel:+37379804176" style=" box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #00EF19; " class="shadow-custom-shadow ml-15 px-6 py-2 rounded-full bg-custom-green text-black text-sm font-semibold inline-flex items-center space-x-2"><span>Sună Acum</span>
                 <i class="fa fa-phone"></i></a>
         </div>
     </header>
@@ -566,7 +806,7 @@
 
 
         <div class="btn">
-            <a href="tel:+37379804176" class="shadow-custom-shadow ml-16 px-10 py-4 rounded-full bg-custom-green text-black text-sm font-semibold hover:bg-custom-green2 inline-flex items-center space-x-2">
+            <a href="tel:+37379804176" style=" box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #00EF19; " class="shadow-custom-shadow ml-16 px-10 py-4 rounded-full bg-custom-green text-black text-sm font-semibold hover:bg-custom-green2 inline-flex items-center space-x-2">
                 <span>Află mai multe</span>
                 <i class="fa fa-phone"></i>
             </a>
@@ -578,7 +818,7 @@
 
         <div class="txtrus">
             <h2>EXPERIENȚĂ ÎN CONSTRUCȚII</h2>
-            <p class="font-bebas">Peste 10 ani de experiență și numeroase proiecte inovatoare finalizate.</p>
+            <p class="font-bebas">Peste 10 ani de experiență și numeroase proiecte finalizate.</p>
         </div>
 
 
@@ -606,85 +846,106 @@
 
         <div class="txt_support">
             <h2>SUPORT COMPLET</h2>
-            <p class="font-bebas">Asistență și îndrumare pe parcursul tuturor etapelor proiectului.</p>
+            <p class="font-bebas">Asistență și îndrumare pe <br> parcursul tuturor etapelor proiectului.</p>
         </div>
 
 
 
-    </div>
+    
 
 
     <style>
-.slideshow-container {
-    position: relative;
-    width: 82%;
-    max-width: 100%;
-    margin: -13% auto;
-    overflow: hidden;
-    aspect-ratio: 1.78; /* Adjust based on the aspect ratio of your image */
-}
+        
 
-.slides {
+.business-section {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    max-width: 90%;
+    margin: 20% auto;
+    border-radius: 10px;
+ }
+
+.content_after {
+    max-width: 50%;
 }
 
-.slide {
-    min-width: 100%;
-    transition: opacity 1s ease-in-out;
-    position: relative;
+.fundation_comp h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.slide img {
-    width: 100%;
-    height:42%;
-    object-fit: cover; /* Ensures the images fill the container while maintaining aspect ratio */
-    display: block;
+.highlight {
+    color: #00ff00;
 }
 
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #00ff00;
+.sub-text {
+    font-size: 18px;
+    color: #666;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.description {
+    font-family: serif;
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.cta-button {
+    margin: 4% 50% 1% 14%;
+    background: #00ff00;
     border: none;
-    padding: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 20px;
-    border-radius: 50%;
+    transition: 0.3s;
+    text-transform: uppercase;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.cta-button:hover {
+    background: #00cc00;
+}
 
-.dots {
-    position: absolute;
-    margin-top: 13%;
-    margin-left: 54%;
-    transform: translateX(-50%); /* Centers the dots */
+.founders {
+    position: relative;
+    max-width: 40%;
     text-align: center;
-    padding: 10px;
-    z-index: 1;
 }
 
-.dot {
-    height: 12px; /* Increased dot size */
-    width: 12px; /* Increased dot size */
-    margin: 5px;
-    background-color: #00ff00;
-    display: inline-block;
-    border-radius: 50%;
-    cursor: pointer;
+.founders img {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.active {
-    background-color:rgba(61, 65, 61, 0.88);
+.founders-info {
+    /* display: flex; */
+    position: absolute;
+    bottom: -54px;
+    left: 40%;
+    right: -8%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    color: #000000;
+    padding: 8px 15px;
+    font-size: 13px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
 }
 
-@media (max-width: 768px) {
-    .prev, .next { display: none; }
+.founders-info span {
+    color: #00ff00; /* Verde */
+    font-weight: bold;
 }
-
 
     </style>
 
@@ -697,7 +958,10 @@
 
 
         <h2 class="text-custom-green font-bebas">Despre noi</h2>
-            <p class="font-bebas"><span style="color:#00EF18;">Doricons</span> este o companie de construcții care își 
+        
+        <p id="dori" style="color:#00EF18;">Doricons</p>
+                
+            <p class="font-bebas"> este o companie de construcții care își 
             cunoaște foarte bine domeniul și a finalizat deja peste 200 de proiecte în decurs de 2 ani. <br> 
             Oferim o gamă completă de servicii și suntem recomandați de clienții noștri fideli.</p>
 
@@ -726,12 +990,47 @@
     <div class="dots"></div>
 
 
-    <div class="white_section" style="background-image: url(bgk.jpg); opacity:100%;">
 
-        
+     
+
+
+        <div class="business-section">
+        <div class="content_after">
+    <div class="fundation_comp">
+        <h1>PUNEM FUNDAȚIA PENTRU <span class="highlight">Visele Tale</span></h1>
+    </div>
+    <p class="sub-text">Construind cu pasiune, precizie și durabilitate fiecare proiect!</p>
+    <p class="description">
+        Suntem o companie de construcții care își cunoaște foarte bine domeniul și a finalizat multiple proiecte 
+        în decurs de mulți ani. Fiecare proiect este o combinație perfectă între expertiză, calitate și atenție la detalii.
+    </p>
+    <p class="description">
+        Oferim o gamă completă de servicii, de la proiectare la execuție, garantând siguranță și calitate la fiecare pas. 
+        Clienții noștri fideli ne recomandă pentru profesionalism și seriozitate.
+    </p>
+    <div  class="cta-button">
+        <a href="tel:+37379804176">SOLICITĂ O CONSULTANȚĂ</a>
+    </div>
     </div>
 
-     <script>
+        <div class="founders">
+            <img src="creators.png" alt="Виктор Гончарук и Роман Кондратьев">
+    <div class="founders-info">Fondatorul companiei de construcții <span>„DoriCons”SRL</span><br> Cu peste 10 ani de experiență în domeniul construcțiilor,
+    a realizat sute de proiecte, punând mereu accent pe calitate, inovație și satisfacția clienților.</div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- <footer>
+        <p>&copy; 2024 My Booking App. All rights reserved.</p>
+    </footer> -->
+    </body>
+
+
+
+
+<script>
         const slides = document.querySelector('.slides');
         const slideImages = document.querySelectorAll('.slide');
         const prevButton = document.querySelector('.prev');
@@ -820,14 +1119,5 @@
         createDots();
         startAutoSlide();
     </script>
-
-
-
-
-
-    <!-- <footer>
-        <p>&copy; 2024 My Booking App. All rights reserved.</p>
-    </footer> -->
-</body>
 
 </html>
