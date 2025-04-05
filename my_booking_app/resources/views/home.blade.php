@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
@@ -455,7 +456,7 @@
 }
 
 .cta-button {
-    margin: 4% 50% 1% 14%;
+    margin: 4% 55% 1% 14%;
     background: #00EF18;
     border: none;
     padding: 12px 6px;
@@ -686,10 +687,10 @@
 
 .call-section {
     position: relative;
-     z-index: 10;
-      background: #1c1c1c;
+    z-index: 10;
+    background: #1c1c1c;
     border-radius: 12px;
-    padding: 7px 30px;
+    padding: 71px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -779,12 +780,727 @@ margin-left: 8%;
 }
 
 .call-image img {
-    margin: 0% -5% -1% 6%;
+    margin: 0% -6% -14% 5%;
     position: relative;
     z-index: 5;
     max-width: 100%;
     display: block;
 }
+
+
+.cities-box {
+  border-radius: 10px;
+  width: 500px;               /* lățimea totală a blocului */
+  margin: 0px auto;          /* centrare pe pagină */
+  padding: 20px;
+  border: 1px solid #ccc;     /* contur subțire */
+  /* background: none;        fundal deschis, dacă dorești */
+}
+
+
+/* Fiecare rând conține 2 coloane: stânga și dreapta */
+.city-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;        /* spațiu între rânduri */
+}
+
+/* Ultimul rând poate să nu mai aibă spațiu jos */
+.city-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Fiecare coloană din rând (oraș) */
+.city-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* imaginea și textul la centru */
+  width: 45%;                 /* împărțim rândul ~în două părți egale */
+}
+
+/* Imaginile stemelor */
+.city-col img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Numele orașului */
+.city-col p {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+/* Containerul principal */
+.priority-cities {
+ 
+  padding: 50px 30px;
+  max-width: 1200px;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Titlul secțiunii */
+.priority-cities h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+/* Evidențierea cuvântului „ПРИОРИТЕТНЫЕ” în verde */
+.priority-cities h2 span {
+  color: #00ff00;
+}
+
+/* Container pentru cele două coloane */
+.priority-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center; /* dacă vrei să fie centrat pe orizontală */
+  flex-wrap: wrap;         /* permite reorganizarea pe ecrane înguste */
+}
+
+/* Lista de orașe (coloana stângă) */
+.cities-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* centrează fiecare city-item pe orizontală */
+  gap: 20px;            /* spațiu vertical între orașe */
+  flex: 0 0 auto;       /* menține lățimea conținutului fără să se întindă */
+}
+
+/* Fiecare element (oraș) */
+.city-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.city-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  filter: grayscale(100%); /* imagini alb-negru, ca în exemplu */
+}
+
+.city-item p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Coloana dreaptă: text + buton */
+.cities-text {
+  flex: 1;               /* ocupă restul spațiului */
+  max-width: 600px;      /* lățime maximă a textului */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;             /* spațiu între paragrafe și buton */
+}
+
+/* Paragrafele explicative */
+.cities-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Butonul verde */
+.btn-green {
+    margin: 1% 2% 1% 35%;
+    display: inline-block;
+    background: #00ff00;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+    max-width: fit-content;
+}
+
+.btn-green:hover {
+  background: #00EF18;
+}
+
+
+
+.after-contract {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: sans-serif; 
+  color: #000;
+}
+
+.after-contract h2 {
+  font-size: 32px;
+  line-height: 1.3;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.after-contract h2 span {
+  color: #00ff00; 
+}
+
+.benefit-list {
+  display: flex;
+  flex-direction: column; 
+  gap: 50px;              
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row-reverse; 
+}
+
+.benefit_two {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.benefit-number {
+  font-size: 48px;
+  font-family: serif;
+  color: #C6C6C6;
+  flex: 0 0 auto;
+}
+
+.benefit-content {
+  flex: 1 1 300px; 
+  min-width: 280px;
+  text-align: left;
+}
+
+.benefit-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.benefit-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.benefit-image {
+  margin: 0% 1% -6% 1%;
+  flex: 0 0 auto;
+  max-width: 300px;
+}
+.benefit-image_house {
+  flex: 0 0 auto;
+  max-width: 300px;
+}
+.benefit-image_number {
+  flex: 0 0 auto;
+  max-width: 300px;
+}
+
+.benefit-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.benefit-image_house img {
+  border-radius: 10px;  
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.benefit-image_number img {
+  border-radius: 10px;  
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+.btn-green_region_supported {
+  display: inline-block;
+  background: #00ff00;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 15px 30px;
+  border-radius: 35px;
+  transition: background 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btn-green_region_supported:hover {
+  background: #00EF18;
+}
+
+.stages {
+  background: #0f0f0f;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.stages h2 {
+  font-size: 32px;
+  color: #00ff00;    
+  margin-bottom: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+ 
+ .timeline-row {
+  position: relative;
+  display: flex;
+  justify-content: space-around;   
+   margin-bottom: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ .timeline-line {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  background: #555;
+  border-radius: 1px;
+  z-index: 1;
+}
+
+ .step {
+  position: relative;
+  z-index: 2; 
+  width: 200px;  
+  text-align: center;
+}
+
+.step .dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ccc;  
+  margin: 0 auto 10px;
+}
+
+.step p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  color: #fff;
+}
+
+
+
+.final-step {
+  position: relative;
+  margin: 50px 0px 50px 283px;
+  width: 220px;        
+  text-align: center;
+}
+
+.final-line {
+  position: absolute;
+  top: 19%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #555;
+  border-radius: 1px;
+  z-index: 1;
+}
+
+.final-dot {
+  position: relative;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00ff00;   
+     margin: 0px 0px 10px 202px;;
+}
+
+
+.final-step p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.final-icon {
+  position: absolute;
+    top: -18px;
+    left: 88%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #00ff00;    
+}
+
+        .img_key_stages {
+            float: left;
+            width: 13%;
+            height: 100%;
+            margin-top: -3%;
+            margin-left: 0%;
+            margin-right: -15%;
+        }
+
+        .img_valic_stages {
+            float: left;
+            width: 13%;
+            height: 100%;
+            margin-top: -14%;
+            margin-left: 7%;
+            margin-right: 0%;
+        }
+
+        .img_perie_stages {
+                float: right;
+                width: 13%;
+                height: 100%;
+                margin-top: -11%;
+                margin-left: -9%;
+                margin-right: 12%;
+        }
+
+        .img_ciocan_stages {
+                float: right;
+                width: 13%;
+                height: 100%;
+                margin-top: 0%;
+                margin-left: -16%;
+                margin-right: 2%;;
+        }
+
+        .step-fin{
+            display: none;
+        }
+
+
+
+         .qa-section {
+  padding: 40px 20px;
+  max-width: 60%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.qa-section h2 {
+    font-family: auto;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+
+.qa-list {
+      font-family: serif;
+    font-size: x-large;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.qa-list li {
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+}
+
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.question:hover {
+  color: #00EF19;
+}
+
+
+.question span:first-child {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+
+
+.question span.plus {
+  font-size: 36px;
+
+    cursor: pointer;
+}
+
+
+.answer {
+  display: none;
+  padding-top: 10px;
+}
+
+.answer ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.answer li {
+    color:rgb(41, 41, 41);
+  margin-bottom: 5px;
+      font-size: 23px;
+}
+
+.answer a {
+       font-size: 20px;
+}
+
+
+.site-footer {
+  background: #0f0f0f; 
+  color: #fff;        
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; 
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px; 
+  margin: 10px 20px;
+}
+
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-logo img {
+  width: 40%;
+  height: auto;
+  margin-right: 10px;
+}
+
+.footer-logo h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-logo span {
+  display: block;
+  font-size: 14px;
+  color: #ccc; 
+}
+
+
+.footer-col p {
+  margin: 5px 0;
+  font-size: 14px;
+  color:#ffffff40;
+}
+
+
+.social-icons a {
+  margin-right: 15px;
+}
+
+
+.privacy-link {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px dashed #fff; 
+  font-size: 14px;
+}
+
+.privacy-link:hover {
+  color: #00ff00; 
+}
+
+.phone {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.green-link {
+  color: #00ff00;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.green-link:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-col {
+    margin: 10px 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.green-link {
+  color: #00ff00;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 999;
+  left: 0; 
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.6); 
+}
+
+.modal-content {
+     background-color: #1c1c1c;
+    margin: 3% auto;
+    padding: 23px;
+    border-radius: 8px;
+    width: 31%;
+    max-width: 100%;
+    position: relative;
+    color: #fff;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#contactForm label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+#contactForm input[type="email"],
+#contactForm input[type="text"],
+#contactForm input[type="tel"] {
+  background: #333;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#contactForm input::placeholder {
+  color: #999;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.checkbox-row label {
+  margin: 0 0 0 5px;
+}
+
+.green-btn {
+  background: #00EF19;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.green-btn:hover {
+  background: #00EF15;
+}
+
+
 
 
 
@@ -1224,6 +1940,165 @@ margin-left: 8%;
     margin-left: 15% !important;
   }
 
+  .priority-content {
+    flex-direction: column;   
+    align-items: center;
+  }
+  .cities-box{
+    width: 350px  !important;
+
+  }
+  .cities-text {
+    max-width: 100%;
+  }
+
+  .btn-green {
+    margin: 1% 2% 1% 20%;
+  }
+
+
+      .benefit-image img {
+  margin: -50% 0% 0% 0% !important;
+  flex: 0 0 auto;
+  max-width: 300px;
+}
+  .benefit {
+    flex-direction: column;
+    text-align: center;
+  }
+  .benefit-number {
+    margin-bottom: 10px;
+  }
+  .benefit-content {
+    text-align: center;
+  }
+
+  .benefit-image_number img{
+          margin: -40% 0% 0% 0% !important;
+
+  }
+
+
+   .timeline-row {
+    flex-direction: column;
+    margin-bottom: -5px;
+  }
+  .timeline-line {
+        top: auto;
+        bottom: 0;
+        left: 6%;
+        width: 2px;
+        height: 98%;
+        transform: translateX(-50%);
+  }
+  .step {
+    width: auto;
+    margin-bottom: 40px;
+  }
+  .step .dot {
+    margin-left: -88%;
+    margin-bottom: 10px;
+  }
+
+  .final-dot {
+   
+  background: #00ff00 !important;    
+                  margin: 0px 0px 0px 12px !important;
+}
+
+.step-fin p {
+    font-size: 14px !important;
+    line-height: 0 !important;
+    margin: 2% 0% 0% 32% !important;
+    color: #fff !important;
+}
+
+  .final-step{
+        /* margin: 50px -388px 50px 287px; */
+    display: none !important;
+    }
+  .final-step p{
+    display: none !important;
+        
+        /* margin: 0% 0% 0% -165%; */
+        /* display: none !important; */
+  }
+
+
+  .step p {
+    font-size: 14px;
+    line-height: 0;
+    margin: -7% 0% 14% 0%;
+    color: #fff;
+}
+
+.step-fin  {
+    display: flex !important;
+}
+
+
+
+.final-icon {
+    position: absolute;
+    top: -18px;
+    left: 80%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #00ff00;
+}
+
+.final-line{
+    display: none !important; 
+}
+
+  .img_key_stages {
+            display: none !important;
+        }
+
+        .img_valic_stages {
+          display: none !important;
+
+        }
+
+        .img_perie_stages {
+                            display: none !important;
+
+        }
+
+        .img_ciocan_stages {
+                            display: none !important;
+
+        }
+
+        .qa-section {
+  max-width: 100% !important;
+}
+
+.question:hover {
+  color: black !important;
+}
+
+
+.question span:first-child {
+  font-weight: 100;
+  text-transform: none;
+}
+
+.answer li {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.answer a{
+    font-size: 18px;
+
+}
+
+.modal-content{
+    width: 90% !important;
+}
+
 
  }
        
@@ -1355,168 +2230,9 @@ margin-left: 8%;
 
 
 
-    <style>
-
-        .cities-box {
-  width: 500px;               /* lățimea totală a blocului */
-  margin: 50px auto;          /* centrare pe pagină */
-  padding: 20px;
-  border: 1px solid #ccc;     /* contur subțire */
-  background: #f9f9f9;        /* fundal deschis, dacă dorești */
-}
 
 
-/* Fiecare rând conține 2 coloane: stânga și dreapta */
-.city-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;        /* spațiu între rânduri */
-}
-
-/* Ultimul rând poate să nu mai aibă spațiu jos */
-.city-row:last-child {
-  margin-bottom: 0;
-}
-
-/* Fiecare coloană din rând (oraș) */
-.city-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;        /* imaginea și textul la centru */
-  width: 45%;                 /* împărțim rândul ~în două părți egale */
-}
-
-/* Imaginile stemelor */
-.city-col img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  filter: grayscale(100%);    /* alb-negru, la fel ca în poză */
-  margin-bottom: 10px;
-}
-
-/* Numele orașului */
-.city-col p {
-  font-size: 16px;
-  color: #333;
-  text-align: center;
-}
-/* Containerul principal */
-.priority-cities {
-  background: #fff; /* fundal alb */
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1); /* umbră discretă */
-  padding: 50px 30px;
-  max-width: 1200px;
-  margin: 50px auto;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-
-/* Titlul secțiunii */
-.priority-cities h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 40px;
-  font-weight: bold;
-}
-
-/* Evidențierea cuvântului „ПРИОРИТЕТНЫЕ” în verde */
-.priority-cities h2 span {
-  color: #00ff00;
-}
-
-/* Container pentru cele două coloane */
-.priority-content {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  justify-content: center; /* dacă vrei să fie centrat pe orizontală */
-  flex-wrap: wrap;         /* permite reorganizarea pe ecrane înguste */
-}
-
-/* Lista de orașe (coloana stângă) */
-.cities-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;  /* centrează fiecare city-item pe orizontală */
-  gap: 20px;            /* spațiu vertical între orașe */
-  flex: 0 0 auto;       /* menține lățimea conținutului fără să se întindă */
-}
-
-/* Fiecare element (oraș) */
-.city-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.city-item img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  margin-bottom: 10px;
-  filter: grayscale(100%); /* imagini alb-negru, ca în exemplu */
-}
-
-.city-item p {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Coloana dreaptă: text + buton */
-.cities-text {
-  flex: 1;               /* ocupă restul spațiului */
-  max-width: 600px;      /* lățime maximă a textului */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;             /* spațiu între paragrafe și buton */
-}
-
-/* Paragrafele explicative */
-.cities-text p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #555;
-}
-
-/* Butonul verde */
-.btn-green {
-  display: inline-block;
-  background: #00ff00;
-  color: #000;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 15px 30px;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-  max-width: fit-content;
-}
-
-.btn-green:hover {
-  background: #6ae000;
-}
-
-/* Responsivitate pentru ecrane mai mici */
-@media (max-width: 768px) {
-  .priority-content {
-    flex-direction: column;  /* stivuiește cele două coloane */
-    align-items: center;
-  }
-  .cities-text {
-    max-width: 100%;
-  }
-}
-
- 
-
-
-    </style>
-
-    <div class="black_section" style="background-image:url(backneg.png); opacity:100%;">
+    <div class="black_section" style="background-image:url(backneg.png); opacity:100%; background-repeat: no-repeat;background-size: cover;">
 
         <img src="cheie.png" alt="Descriere imagine" class="img_key">
         <img src="valic.png" alt="Descriere imagine" class="img_valic">
@@ -1572,7 +2288,7 @@ margin-left: 8%;
         Clienții noștri fideli ne recomandă pentru profesionalism și seriozitate.
     </p>
     <div  class="cta-button">
-        <a href="tel:+37379804176">SOLICITĂ O CONSULTANȚĂ</a>
+        <a href="#" class="openModalBtn">SOLICITĂ O CONSULTANȚĂ</a>
     </div>
     </div>
 
@@ -1661,57 +2377,432 @@ margin-left: 8%;
 </section>
 
 
+<section class="priority-cities">
+  <h2>ORAȘE <span>PRIORITARE</span> DE LUCRĂRI</h2>
+
+  <div class="priority-content">
+    
 <div class="cities-box">
-  <!-- Rândul 1: Moscova (stânga) | Rostov (dreapta) -->
-  <div class="city-row">
+   <div class="city-row">
     <div class="city-col">
-      <img src="moscow.png" alt="Москва" />
-      <p>МОСКВА</p>
+      <img src="ch.png" alt="Chisinau" />
+      <p>Chișinău</p>
     </div>
     <div class="city-col">
-      <img src="rostov.png" alt="Ростов" />
-      <p>РОСТОВ</p>
+      <img src="bl.png" alt="Balti" />
+      <p>Bălți</p>
     </div>
   </div>
 
-  <!-- Rândul 2: Piter (stânga) | nimic (dreapta) -->
-  <div class="city-row">
+   <div class="city-row">
     <div class="city-col">
-      <img src="piter.png" alt="Питер" />
-      <p>ПИТЕР</p>
+      <img src="fl.png" alt="Floresti" />
+      <p>Florești</p>
     </div>
-    <div class="city-col"></div> <!-- coloană goală -->
+    <div class="city-col">
+      <img src="sr.png" alt="Soroca" />
+      <p>Soroca</p>
+    </div>  
   </div>
 
-  <!-- Rândul 3: Kazan (stânga) | Ufa (dreapta) -->
-  <div class="city-row">
+   <div class="city-row">
     <div class="city-col">
-      <img src="kazan.png" alt="Казань" />
-      <p>КАЗАНЬ</p>
+      <img src="ed.png" alt="Edinet" />
+      <p>Edineț</p>
     </div>
     <div class="city-col">
-      <img src="ufa.png" alt="Уфа" />
-      <p>УФА</p>
+      <img src="cmr.png" alt="Comrat" />
+      <p>Comrat</p>
     </div>
+    
   </div>
 </div>
 
+     <div class="cities-text">
+  <p>
+    Un start de succes al oricărui proiect de construcții depinde de numeroși factori: experiența, profesionalismul și fiabilitatea partenerilor.
+  </p>
+  <p>
+    Compania <strong style="color: #00EF19;">Doricons</strong> – oferă soluții 
+    inovatoare și lucrări de înaltă calitate. Realizăm proiecte nu doar în orașele prioritare, 
+    ci pe întreg teritoriul țării, precum și cu succes pe plan internațional.
+  </p>
+  <p>
+    Abordarea noastră complexă și suportul constant pentru clienți garantează dezvoltarea eficientă 
+    a proiectelor dumneavoastră. Încredințați-vă profesioniștilor – cu <strong style="color: #00EF19;">Doricons</strong>, succesul este garantat.
+  </p>
+  <a href="tel:+37379961542" class="btn-green">AFLĂ MAI MULT</a>
+</div>
+
+  </div>
+</section>
+
+
+
+
  </div>
 
+
+
+ <section class="after-contract">
+  <h2>
+    DUPĂ ÎNCHEEREA CONTRACTULUI <br />
+    <span>CLIENTUL PRIMEȘTE</span>
+  </h2>
+
+  <div class="benefit-list">
+    <div class="benefit">
+      <div class="benefit-number">01</div>
+     <div class="benefit-content">
+    <h3>Consultanță completă pentru proiecte de construcții rezidențiale</h3>
+    <p>
+    De la proiectare și obținerea autorizațiilor până la execuția finală a lucrărilor, 
+    Doricons îți oferă suport specializat și consultanță dedicată pentru construirea casei tale.
+    </p>
+        </div>
+      <div class="benefit-image">
+        <img src="house_n.png" alt="Юридическая и информационная поддержка" />
+      </div>
+    </div>
+
+    <div class="benefit_two">
+      <div class="benefit-number">02</div>
+      <div class="benefit-content">
+        <h3>Servicii inovatoare de design și personalizare</h3>
+        <p>
+            Echipa Doricons transformă viziunea ta într-o realitate modernă, oferindu-ți soluții 
+            complete de design interior și exterior, alese cu grijă pentru a asigura calitatea și estetica 
+            fiecărui proiect.
+        </p>
+        </div>
+      <div class="benefit-image_house">
+        <img src="house.png" alt="Рекламные и дизайнерские услуги" />
+      </div>
+    </div>
+
+    <div class="benefit">
+      <div class="benefit-number">03</div>
+      <div class="benefit-content">
+        <h3>Coordonare organizatorică și execuție tehnică impecabilă</h3>
+        <p>
+            Gestionăm cu profesionalism toate etapele construcției, de la organizarea echipelor și selecția 
+            furnizorilor, până la supervizarea tehnică a lucrărilor, garantând un rezultat final de excepție.
+        </p>
+        </div>
+      <div class="benefit-image_number">
+        <img src="house2.png" alt="Организационные и технические инструкции" />
+      </div>
+    </div>
+  </div>
+<div>
+          <a href="tel:+37379961542" class="btn-green_region_supported openModalBtn"   >PRIMEȘTE DETALII DESPTE CONSTRUCȚII</a>
+
+</div>
+</section>
+
+
+    
+
+
+<section class="stages" style="background-image:url(backneg.png); opacity:100%; background-repeat: no-repeat;background-size: cover;">
+
+        <img src="cheie.png" alt="Descriere imagine" class="img_key_stages">
+        
+        <img src="ciocan.png" alt="Descriere imagine" class="img_ciocan_stages">
+
+   <h2>Etape</h2>
+
+   <div class="timeline-row">
+     <div class="timeline-line"></div>
+    
+     <div class="step">
+      <div class="dot"></div>
+      <p>Semnarea contractului și consultanță inițială</p>
+    </div>
+     <div class="step">
+      <div class="dot"></div>
+      <p>Stabilirea planului și proiectarea casei</p>
+    </div>
+     <div class="step">
+      <div class="dot"></div>
+      <p>Obținerea autorizațiilor și avizelor necesare</p>
+    </div>
+  </div>
+
+   <div class="timeline-row">
+    <div class="timeline-line"></div>
+
+     <div class="step">
+      <div class="dot"></div>
+      <p>Organizarea echipei și pregătirea șantierului</p>
+    </div>
+     <div class="step">
+      <div class="dot"></div>
+      <p>Fundație și structură de rezistență</p>
+    </div>
+     <div class="step">
+      <div class="dot"></div>
+      <p>Ridicarea pereților și instalarea acoperișului</p>
+    </div>
+  </div>
+
+   <div class="timeline-row">
+    <div class="timeline-line"></div>
+
+     <div class="step">
+      <div class="dot"></div>
+      <p>Instalarea sistemelor casnice</p>
+    </div>
+     <div class="step">
+      <div class="dot"></div>
+      <p>Finisaje interioare și exterioare</p>
+    </div>
+     <div class="step">
+      <div class="dot"></div>
+      <p>Verificări și testări finale</p>
+    </div>
+        <!-- final dots for tel -->
+    <div class="step-fin">
+      <div class="final-dot">
+        <i class="fa fa-flag final-icon" aria-hidden="true"></i>
+      </div>
+      <p>Casă la cheie</p>
+    </div>
+  </div>
+  <!-- final dots for pc -->
+    <div class="final-step">
+    <div class="final-line"></div>
+    <div class="final-dot">
+      <i class="fa fa-flag final-icon" aria-hidden="true"></i>
+    </div>
+    <p>Casă la cheie</p>
+  </div>
+
+  <img src="valic.png" alt="Descriere imagine" class="img_valic_stages">
+        <img src="perie.png" alt="Descriere imagine" class="img_perie_stages">
+
+</section>
+
+
+
+
+<section class="qa-section">
+  <h2>Q/A</h2>
+  <ul class="qa-list">
+    <li>
+      <div class="question">
+        <span>Semnarea contractului și consultanță inițială</span>
+        <span class="plus">+</span>
+      </div>
+      <div class="answer">
+        <ul>
+          <li>Care sunt documentele necesare pentru semnarea unui contract de construcție?</li>
+          <a>Pentru semnarea contractului sunt necesare: autorizația de construcție valabilă, planul de proiect aprobat,
+             extrasul din registrul cadastral al imobilului și avizele necesare din partea autorităților locale.<br>(Pentru detalii contactati la numarul de mai sus)</a>
+          <li>Este obligatorie consultanța inițială înainte de semnarea contractului de construcție?</li>
+          <a> Consultanța inițială nu este obligatorie, dar este recomandată deoarece oferă clarificări importante privind costurile, 
+            termenele și obligațiile contractuale, 
+            evitând astfel posibile neînțelegeri sau riscuri ulterioare.</a>
+            <li>Cum se stabilește durata execuției lucrărilor în contractul de construcție?</li>
+            <a>Durata execuției lucrărilor se stabilește în funcție de complexitatea proiectului, volumul lucrărilor și specificul 
+                acestora, fiind prevăzută expres în contract. Modificările termenului se fac doar prin acte adiționale.</a>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="question">
+        <span>Proiectarea și designul casei</span>
+        <span class="plus">+</span>
+      </div>
+      <div class="answer">
+        <ul>
+          <li>În cât timp este gata proiectul de arhitectură al unei case?</li>
+          <a>Durata realizării unui proiect variază între 30 și 90 de zile, în funcție de complexitatea casei, specificațiile tehnice și reviziile solicitate.</a>
+          <li>Pot să modific proiectul după finalizare?</li>
+          <a>Da, însă modificările ulterioare implică revizuirea proiectului și costuri suplimentare, necesitând uneori noi avize și aprobări.</a>
+          <li>Este obligatoriu să angajez un arhitect autorizat pentru proiectare?</li>
+          <a>Da, proiectul de arhitectură trebuie realizat obligatoriu de un arhitect autorizat, pentru a fi legal și valid în vederea obținerii autorizației de construire.</a>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="question">
+        <span>Obținerea autorizațiilor și avizelor</span>
+        <span class="plus">+</span>
+      </div>
+      <div class="answer">
+        <ul>
+          <li>Cât durează obținerea autorizației de construcție?</li>
+          <a>Termenul legal este de până la 30 de zile lucrătoare din momentul depunerii complete a documentației, însă, în practică, poate dura mai mult în funcție de specificul proiectului.</a>
+          <li>Ce se întâmplă dacă construiesc fără autorizație?</li>
+          <a>Construcția fără autorizație atrage amenzi, riscul demolării și imposibilitatea înscrierii construcției în cartea funciară.</a>
+          <li>Trebuie să obțin separat avize pentru utilități (electricitate, apă, gaze)?</li>
+          <a>Da, pentru fiecare utilitate în parte trebuie solicitat avizul de racordare înainte de începerea lucrărilor.</a>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="question">
+        <span>Construcția structurii și a instalațiilor</span>
+        <span class="plus">+</span>
+      </div>
+      <div class="answer">
+        <ul>
+          <li>Ce tipuri de structuri sunt recomandate pentru o casă rezidențială?</li>
+          <a>Cele mai uzuale sunt structurile din beton armat, cărămidă, lemn sau combinații dintre acestea,
+             alegerea depinzând de condițiile terenului și preferințele beneficiarului.</a>
+          <li>Cât timp durează construcția structurii unei case?</li>
+          <a>Durata tipică pentru structura unei case obișnuite este între 2 și 6 luni, în funcție de complexitatea proiectului și de condițiile meteo.</a>
+          <li>Când pot începe montarea instalațiilor electrice și sanitare?i</li>
+          <a>Aceste lucrări pot începe după finalizarea structurii și înainte de efectuarea finisajelor, conform etapelor stabilite în graficul de execuție.</a>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="question">
+        <span>Finisaje și predarea casei la cheie</span>
+        <span class="plus">+</span>
+      </div>
+      <div class="answer">
+        <ul>
+          <li>Ce înseamnă predarea „la cheie”?</li>
+          <a>Predarea „la cheie” implică finalizarea tuturor lucrărilor interioare și exterioare, casa fiind gata pentru utilizare imediată, fără alte lucrări suplimentare necesare.</a>
+          <li>Ce garanție primesc pentru lucrările executate?</li>
+          <a>În mod obișnuit, garanția lucrărilor este de minim 2 ani pentru finisaje și instalații, și de 10 ani pentru structura de rezistență.</a>
+          <li>Pot interveni în alegerea materialelor și finisajelor interioare?</li>
+          <a>Da, beneficiarul poate selecta materialele și finisajele dorite, acest aspect fiind stabilit contractual încă din faza inițială.</a>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</section>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const questions = document.querySelectorAll(".question");
   
+  questions.forEach(question => {
+    question.addEventListener("click", function() {
+      const plusEl = this.querySelector(".plus");
+      const answerDiv = this.nextElementSibling;
+      if (answerDiv.style.display === "block") {
+        answerDiv.style.display = "none";
+        plusEl.textContent = "+";
+      } else {
+        answerDiv.style.display = "block";
+        plusEl.textContent = "-";
+      }
+    });
+  });
+});
+</script>
+
 
 
 
 
     </div>
 
-    <!-- <footer>
-        <p>&copy; 2024 My Booking App. All rights reserved.</p>
-    </footer> -->
+    <style>
+
+
+
+    </style>
+
+    <footer class="site-footer" style="background-image:url(backneg.png); opacity:100%; background-repeat: no-repeat;background-size: cover;">
+  <div class="footer-content">
+    <div class="footer-col left">
+      <div class="footer-logo">
+        <img src="logo.png" alt="Команда R" />
+        <div>
+          <h3>Doricons</h3>
+          <span>Companie de construcții</span>
+        </div>
+      </div>
+      <p>Pagina oficială a companiei de construcție Doricons SRL</p>
+      <!-- <p>ИНН: 0000000000 / ОГРН: 0000000000000</p> -->
+    </div>
+
+     <div class="footer-col center">
+      <!-- <div class="social-icons">
+         <a href="#" aria-label="VK">
+          <img src="vk.png" alt="VK" />
+        </a>
+        <a href="#" aria-label="Instagram">
+          <img src="instagram.png" alt="Instagram" />
+        </a>
+      </div> -->
+      <!-- <a href="#" class="privacy-link">confidențialitate</a> -->
+    </div>
+
+     <div class="footer-col right">
+      <p class="phone" href="tel:+37379961542">+373 (79)-961-542</p>
+      <a href="tel:+37379961542" class="green-link">Aveți întrebări?</a><br />
+      <a href="#"   class="green-link openModalBtn">Trimite un mesaj</a>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="contactModal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeModalBtn">&times;</span>
+    
+    <h3>Introduceți datele pentru contact</h3>
+    <p>Un reprezentant Doricons vă va contacta în cel mai scurt timp.</p>
+
+    <form id="contactForm" action="https://formspree.io/f/mgvapwvo" method="POST" >
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Emailul dvs." required />
+
+      <label for="name">Nume</label>
+      <input type="text" id="name" name="name" placeholder="Numele dvs." required />
+
+      <label for="city">Oraș</label>
+      <input type="text" id="city" name="city" placeholder="Orașul de construcție" />
+
+      <label for="investment">Întrebarea Dvs</label>
+      <input type="text" id="investment" name="investment" placeholder="Ex: Cât ar costa sa fac un acoperiș" />
+
+      <label for="phone">Telefon</label>
+      <input type="tel" id="phone" name="phone" placeholder="+373 79 000 000" />
+
+      <div class="checkbox-row">
+        <input type="checkbox" id="privacy" name="privacy" required />
+        <label for="privacy">Sunt de acord cu politica de confidențialitate</label>
+      </div>
+
+      <button type="submit" class="green-btn">Trimite</button>
+    </form>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const openModalBtns = document.querySelectorAll(".openModalBtn");
+  const contactModal = document.getElementById("contactModal");
+  const closeModalBtn = document.getElementById("closeModalBtn");
+
+  openModalBtns.forEach(function(btn) {
+    btn.addEventListener("click", function(e) {
+      e.preventDefault(); 
+      contactModal.style.display = "block";
+    });
+  });
+
+  closeModalBtn.addEventListener("click", function() {
+    contactModal.style.display = "none";
+  });
+
+  window.addEventListener("click", function(e) {
+    if (e.target === contactModal) {
+      contactModal.style.display = "none";
+    }
+  });
+});
+</script>
+
+
     </body>
-
-
-
 
 <script>
         const slides = document.querySelector('.slides');
